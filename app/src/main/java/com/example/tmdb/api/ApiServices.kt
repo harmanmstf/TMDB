@@ -9,10 +9,6 @@ import retrofit2.http.Query
 
 interface ApiServices {
 
-    //    https://api.themoviedb.org/3/movie/550?api_key=***
-    //    https://api.themoviedb.org/3/movie/popular?api_key=***
-    //    https://api.themoviedb.org/3/
-
     @GET("movie/popular")
     suspend fun getPopularMoviesList(@Query("page") page: Int): Response<MoviesListResponse>
 
